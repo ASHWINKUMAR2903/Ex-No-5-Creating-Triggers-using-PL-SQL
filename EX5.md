@@ -1,8 +1,8 @@
 # Ex. No: 5 Creating Triggers using PL/SQL
 
-### AIM: To create a Trigger using PL/SQL.
+## AIM: To create a Trigger using PL/SQL.
 
-### Steps:
+## Steps:
 1. Create employee table with following attributes (empid NUMBER, empname VARCHAR(10), dept VARCHAR(10),salary NUMBER);
 2. Create salary_log table with following attributes (log_id NUMBER GENERATED ALWAYS AS IDENTITY, empid NUMBER,empname VARCHAR(10),old_salary NUMBER,new_salary NUMBER,update_date DATE);
 3. Create a trigger named as log_salary-update.
@@ -12,7 +12,9 @@
 7. Whenever a salary is updated for the employee it must be logged into the salary_log table with old salary and new salary.
 8. Display the employee table, salary_log table.
 
-### Program:
+### NAME : ASHWIN KUMAR.A
+### REG.NO :212222100006 
+## Program:
 ### Create employee table
 ```
 CREATE TABLE employee(empid NUMBER,empname VARCHAR(10),dept VARCHAR(10),salary NUMBER);
@@ -41,7 +43,7 @@ SQL> CREATE OR REPLACE TRIGGER log_salary_update
  10  /
 ```
 ![image](https://github.com/ASHWINKUMAR2903/Ex-No-5-Creating-Triggers-using-PL-SQL/assets/119407186/08302b6b-8748-4c86-b286-1ceaa91b2d7b)
-### Output:
+## Output:
 now lets update the values in employee table to create a trigger in the log_salary_update to the salary_log table.
 ```
 update employee set salary = 53000 where empid = 2;
@@ -51,5 +53,5 @@ update employee set salary = 53000 where empid = 2;
 now lets see the salary_log table.
 ![image](https://github.com/ASHWINKUMAR2903/Ex-No-5-Creating-Triggers-using-PL-SQL/assets/119407186/2594d128-c1fc-41c7-a8ff-770ec6e838e8)
 
-### Result:
+## Result:
 The trigger has been created and executed successfully.
